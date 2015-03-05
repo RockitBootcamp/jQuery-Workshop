@@ -30,7 +30,7 @@ Note that there are two types of messages that can be created:
 
 The `main.js` file has just enough code to setup jQuery's "Document Readiness". Briefly explain the concept but don't worry about getting into details of anonymous functions and DOM readiness.
 
-### Functions
+### Functions (30 Mins)
 
 The first goal of instruction is to explain functions. Create a function called `makeMessage()` and call it to show some output
 
@@ -64,13 +64,13 @@ var makeMessage = function() {
 makeMessage();
 ```
 
-### Better Dom Creation and function arguments
+### Better Dom Creation and function arguments (30 Mins)
 
 Explain that by creating the new DOM this way, we can chain methods onto the new `div` and therefore it's easier to create something dynamic from our arguments. Be sure to explain:
 
 - Function arguments in general
 - Creating new DOM is different from selecting existing DOM
- - $('<div>') vs $('div')
+ - `$('<div>')` vs `$('div')`
 - Method Chaining
 
 ```js
