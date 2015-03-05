@@ -143,3 +143,21 @@ $('.submit').on('click', function() {
 	makeMessage(message, 'self');
 });
 ```
+
+### Server
+
+If there's time, then we can explain how this "server" works. Otherwise the students can just copy it from the solution.
+
+```js
+setInterval(function() {
+
+	// Get a random number
+	var random = Math.floor(Math.random() * 3);
+
+	// Get the server data
+	$.get('server.json', function(data) {
+		makeMessage(data.messages[random], 'other');
+	});
+
+}, 5000);
+```
