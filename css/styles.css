@@ -1,0 +1,147 @@
+/****************************************
+  Reset
+*****************************************/
+
+html {
+	color: #777;
+	font-family: Arial;
+}
+* {
+	box-sizing: border-box;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+}
+html, body { height: 100%; padding: 0; margin: 0; }
+body { min-height: 100%; }
+img { border: 0; }
+a:focus, a:active, button:focus {
+	outline: 0;
+}
+
+
+/****************************************
+  Defaults
+*****************************************/
+
+body {
+	background: rgb(192, 222, 237) url('../images/bg.png') repeat-x;
+}
+
+a {
+	color: #2E9AC2;
+	text-decoration: none;
+}
+
+button {
+	background-color: #2E9AC2;
+	border-radius: 5px;
+	border: none;
+	color: #FFF;
+	padding: 5px 15px;
+	cursor: pointer;
+}
+
+
+/****************************************
+  Layout
+*****************************************/
+
+body {
+	background: rgb(192, 222, 237) url('../images/bg.png') repeat-x;
+}
+
+main {
+	width: 600px;
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	bottom: 50px;
+	transform: translateX(-50%);
+	background-color: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 40px;
+	border-bottom: 1px solid #E1E8ED;
+	padding: 10px;
+	color: #0084B4;
+	font-weight: bold;
+}
+
+.thread {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 40px;
+	bottom: 150px;
+	overflow-y: scroll;
+	padding: 10px;
+}
+
+.thread > * + * {
+	margin-top: 10px;
+}
+
+.compose {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 150px;
+	background-color: #E5F2F7;
+	padding: 10px;
+}
+
+/**
+ * Messages
+ */
+
+div.message {
+	border-radius: 5px;
+	width: 80%;
+	color: #fff;
+	padding: 10px;
+	clear: both;
+	background-color: red;
+	float: right;
+}
+
+div.message.other {
+	background-color: #4DB25A;
+	float: left;
+}
+
+div.message.self {
+	background-color: #3B94D9;
+	float: right;
+}
+
+/****************************************
+  Compose
+*****************************************/
+
+.compose > * + * {
+	margin-top: 10px;
+}
+
+.compose textarea {
+	border-radius: 3px;
+	background-color: #fff;
+	border: 1px solid #C0E1ED;
+	display: block;
+	width: 100%;
+	height: 90px;
+	padding: 10px;
+	resize: none;
+}
+
+.compose textarea:focus {
+	outline: none;
+}
