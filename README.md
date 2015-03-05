@@ -46,25 +46,41 @@ makeMessage();
 
 Further explain arguments and parameters as necessary.
 
-### DOM Creation (30 mins)
+### jQuery Essentials (30 mins)
 
-Expand the function to create a `div` tag with a `message` class and append it to `.thread`. Be sure to explain:
+Teach how jQuery works at a fundamental level:
+- `$('subject').action()`
 
-- How to select something in the existing DOM
-- How to call methods from what you selected (append in this case)
-- How append can take a string of HTML to create new DOM
+Practice removing and editing existing DOM:
+
+```js
+$('.message').remove();
+$('button').remove();
+$('message').removeClass('other');
+$('message').addClass('self');
+```
+
+Then practice creating new DOM and appending it to existing DOM:
+
+```js
+$('.thread').append('Hello World');
+$('.thread').append('<div>Hello World</div>');
+$('.thread').append('<div class="message self">Hello World</div>');
+```
+
+### DOM Creation (10 mins)
+
+Use the knowledge they gained from creating DOM and change the function we created to append new DOM:
 
 ```js
 var makeMessage = function() {
-
 	$('thread').append('<div class="message self">Hello World</div>');
-	
 }
 
 makeMessage();
 ```
 
-### Better Dom Creation and function arguments (30 Mins)
+### Better Dom Creation and function arguments (20 Mins)
 
 Explain that by creating the new DOM this way, we can chain methods onto the new `div` and therefore it's easier to create something dynamic from our arguments. Be sure to explain:
 
@@ -83,4 +99,47 @@ var makeMessage = function(message, who) {
 }
 
 makeMessage('Hello World', 'self');
+```
+
+### Events (30 mins)
+
+Start some new code for the button click event:
+
+```js
+$('.submit').on('click', function() {
+	console.log('Click');
+});
+```
+
+Teach the students all the parts and console log a message to show that the code is working.
+
+Next, get the message that was typed into the `textarea` field
+
+```js
+$('.submit').on('click', function() {
+	var message = $('textarea').val();
+	console.log(message);
+});
+```
+
+Explain that some methods are getters and setters. In this case, since we're calling `val()` without arguments, it's a getter and we can receive the value into a variable.
+
+Then explain how it can be a setter too. This way we can reset the textarea to empty when we have the value:
+
+```js
+$('.submit').on('click', function() {
+	var message = $('textarea').val();
+	$('textarea').val('')
+	console.log(message);
+});
+```
+
+Now we can conveniently call our `makeMessage` method from before:
+
+```js
+$('.submit').on('click', function() {
+	var message = $('textarea').val();
+	$('textarea').val('')
+	makeMessage(message, 'self');
+});
 ```

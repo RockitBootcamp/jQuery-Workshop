@@ -17,11 +17,11 @@ $(function() {
 
 		// Get the message text from the textarea
 		var message = $('textarea').val();
+		$('textarea').val('');
 		if (message == '') return;
 
 		// Make the message and clear the textarea
 		makeMessage(message, 'self');
-		$('textarea').val('');
 
 	});
 
