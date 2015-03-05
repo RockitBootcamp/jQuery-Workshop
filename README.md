@@ -13,7 +13,7 @@ The goal of the workshop is to create a message system similar to Twitter's "Dir
 
 ## Instruction
 
-### Introduction
+### Introduction (20 Mins)
 
 Introduce the students to the HTML they will be working with and how we're including jQuery and our own main.js file from the HTML file. It might be nice to create some hard-coded messages (`<div class="message">`) to show how the new DOM will be created
 
@@ -26,7 +26,7 @@ Note that there are two types of messages that can be created:
 
 "Self" means messages that we created which will show up as blue. "Other" means messages that the other person has created which will show up green. Messages without `self` or `other` classes will be displayed with a white background and gray text. This way we can see we did something wrong.
 
-### Document Ready
+### Document Ready (5 Mins)
 
 The `main.js` file has just enough code to setup jQuery's "Document Readiness". Briefly explain the concept but don't worry about getting into details of anonymous functions and DOM readiness.
 
