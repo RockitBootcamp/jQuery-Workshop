@@ -106,20 +106,20 @@ header {
 div.message {
 	border-radius: 5px;
 	width: 80%;
-	color: #fff;
 	padding: 10px;
 	clear: both;
-	background-color: red;
-	float: right;
+	float: left;
 }
 
 div.message.other {
 	background-color: #4DB25A;
+	color: #fff;
 	float: left;
 }
 
 div.message.self {
 	background-color: #3B94D9;
+	color: #fff;
 	float: right;
 }
 
