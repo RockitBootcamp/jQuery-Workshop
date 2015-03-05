@@ -1,15 +1,27 @@
 # jQuery Workshop
 
-## Setup
+## Prerequisites
 
 Be sure to have students download and install Sublime Text Editor, any version is okay. Also have them download the code from GitHub:
 
 - [Sublime Text Editor](http://www.sublimetext.com/3)
 - https://github.com/RockitBootcamp/jQuery-Workshop
 
+Students should come in with basic knowledge of:
+- HTML and CSS
+- Functions (from any language)
+- Variables (from any language)
+
 ## Outline
 
 The goal of the workshop is to create a message system similar to Twitter's "Direct Messages". Instructors should demonstrate the working code by substituting the `main.js` file for `solution.js` (in the `index.html` page) and then running the code.
+
+Students will learn
+- Document Readiness for JavaScript
+- jQuery DOM manipulation
+- jQuery Events
+- Use of modular functions
+- AJAX basics
 
 ## Instruction
 
